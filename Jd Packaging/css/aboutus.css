@@ -1,0 +1,113 @@
+/* Google Fonts Import for Fonts in Image */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+:root {
+    --brand-dark-green: #0b3b29;
+    --text-primary: #2d3748;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-primary);
+}
+
+/* MAIN SECTION STYLING */
+.about-page-content {
+    background-color: #f8f9fa;
+}
+
+/* Title Underline */
+.about-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.25rem;
+    font-weight: 400;
+    color: var(--brand-dark-green);
+    position: relative;
+    display: inline-block;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    background-color: var(--brand-dark-green);
+}
+
+.about-description p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #333333;
+    margin-bottom: 1.5rem;
+}
+
+/* OUR VALUES HEADER */
+.values-title-wrap {
+    position: relative;
+}
+
+.values-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--brand-dark-green);
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.values-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+    background-color: var(--brand-dark-green);
+}
+
+/* VALUES CARDS & VERTICAL DIVIDERS */
+.value-col {
+    position: relative;
+}
+
+/* Add vertical line separators on Desktop */
+@media (min-width: 992px) {
+    .value-col:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 10%;
+        right: 0;
+        height: 80%;
+        width: 1px;
+        background-color: #dcdcdc;
+    }
+}
+
+.icon-box i {
+    width: 38px;
+    height: 38px;
+    stroke: #222222;
+    stroke-width: 1.3px;
+}
+
+.value-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 0.75rem;
+}
+
+.value-text {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
